@@ -13,7 +13,7 @@ class MeijiTest extends TestCase
         $SUT = $this->getSUT();
         $this->assertFalse($SUT->supports(new \DateTimeImmutable('1868-01-24')));
         $this->assertTrue($SUT->supports(new \DateTimeImmutable('1868-01-25')));
-        $this->assertTrue($SUT->supports(new \DateTimeImmutable('1912-07-30')));
+        $this->assertTrue($SUT->supports(new \DateTimeImmutable('1912-07-29')));
         $this->assertFalse($SUT->supports(new \DateTimeImmutable('1912-07-31')));
         $this->assertFalse($SUT->supports(new \DateTimeImmutable('2019-04-01')));
     }

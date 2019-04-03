@@ -22,6 +22,11 @@ class Reiwa implements WarekiProviderInterface
         return $ymd >= 20190501;
     }
 
+    /**
+     * @canOnlyUsedBy \Quartetcom\TryDependencyAnalyzer\WarekiProviderResolver
+     * @param \DateTimeInterface $date
+     * @return string
+     */
     public function provide(\DateTimeInterface $date): string
     {
         return $this->formatDate($this->getWarekiYear($date), $date);

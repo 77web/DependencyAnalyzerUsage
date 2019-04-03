@@ -7,9 +7,11 @@ namespace Quartetcom\TryDependencyAnalyzer\Wareki;
 class Meiji implements WarekiProviderInterface
 {
     use WarekiYearTrait;
+    use FormatDateTrait;
 
     public function __construct()
     {
+        $this->name = '明治';
         $this->startYear = 1868;
     }
 
@@ -22,9 +24,6 @@ class Meiji implements WarekiProviderInterface
 
     public function provide(\DateTimeInterface $date): string
     {
-        $year = $this->getWarekiYear($date);
-
-        return sprintf('明治%s年%s', $year, $date->format('n月j日'));
+        return $this->formatDate($this->getWarekiYear($date), $date);
     }
-
 }

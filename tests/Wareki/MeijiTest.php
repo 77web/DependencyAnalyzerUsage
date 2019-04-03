@@ -6,7 +6,7 @@ namespace Quartetcom\TryDependencyAnalyzer\Wareki;
 
 use PHPUnit\Framework\TestCase;
 
-class MeijiProviderTest extends TestCase
+class MeijiTest extends TestCase
 {
     public function test_supports()
     {
@@ -28,6 +28,6 @@ class MeijiProviderTest extends TestCase
 
     private function getSUT()
     {
-        return new MeijiProvider();
+        return new Meiji();
     }
 }

@@ -4,7 +4,7 @@
 namespace Quartetcom\TryDependencyAnalyzer\Wareki;
 
 
-class MeijiProvider implements WarekiProviderInterface
+class Meiji implements WarekiProviderInterface
 {
     use WarekiYearTrait;
 

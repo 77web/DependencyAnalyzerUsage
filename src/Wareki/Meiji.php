@@ -22,6 +22,11 @@ class Meiji implements WarekiProviderInterface
         return $ymd >= 18680125 && $ymd < 19120730;
     }
 
+    /**
+     * @canOnlyUsedBy \Quartetcom\TryDependencyAnalyzer\WarekiProviderResolver
+     * @param \DateTimeInterface $date
+     * @return string
+     */
     public function provide(\DateTimeInterface $date): string
     {
         return $this->formatDate($this->getWarekiYear($date), $date);

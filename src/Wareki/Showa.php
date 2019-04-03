@@ -22,6 +22,11 @@ class Showa implements WarekiProviderInterface
         return $ymd >= 19261225 && $ymd < 19890107;
     }
 
+    /**
+     * @canOnlyUsedBy \Quartetcom\TryDependencyAnalyzer\WarekiProviderResolver
+     * @param \DateTimeInterface $date
+     * @return string
+     */
     public function provide(\DateTimeInterface $date): string
     {
         return $this->formatDate($this->getWarekiYear($date), $date);

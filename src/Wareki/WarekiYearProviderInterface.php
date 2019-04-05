@@ -4,7 +4,7 @@
 namespace Quartetcom\TryDependencyAnalyzer\Wareki;
 
 
-interface WarekiProviderInterface
+interface WarekiYearProviderInterface
 {
     public function supports(\DateTimeInterface $date): bool;
 

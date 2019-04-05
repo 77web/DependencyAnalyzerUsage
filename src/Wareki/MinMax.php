@@ -4,9 +4,8 @@
 namespace Quartetcom\TryDependencyAnalyzer\Wareki;
 
 
-class MinMax implements WarekiProviderInterface
+class MinMax implements WarekiYearProviderInterface
 {
-    use FormatDateTrait;
     use WarekiYearTrait;
 
     /**
@@ -45,6 +44,6 @@ class MinMax implements WarekiProviderInterface
 
     public function provide(\DateTimeInterface $date): string
     {
-        return $this->formatDate($this->getWarekiYear($date), $date);
+        return sprintf('%s%s', $this->name, $this->getWarekiYear($date));
     }
 }

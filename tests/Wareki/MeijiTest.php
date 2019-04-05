@@ -22,8 +22,8 @@ class MeijiTest extends TestCase
     {
         $SUT = $this->getSUT();
 
-        $this->assertEquals('明治元年1月1日', $SUT->provide(new \DateTimeImmutable('1868-01-01')));
-        $this->assertEquals('明治2年1月1日', $SUT->provide(new \DateTimeImmutable('1869-01-01')));
+        $this->assertEquals('明治元', $SUT->provide(new \DateTimeImmutable('1868-01-01')));
+        $this->assertEquals('明治2', $SUT->provide(new \DateTimeImmutable('1869-01-01')));
     }
 
     private function getSUT()

@@ -21,8 +21,8 @@ class HeiseiTest extends TestCase
     {
         $SUT = $this->getSUT();
 
-        $this->assertEquals('平成元年1月7日', $SUT->provide(new \DateTimeImmutable('1989-01-07')));
-        $this->assertEquals('平成2年1月1日', $SUT->provide(new \DateTimeImmutable('1990-01-01')));
+        $this->assertEquals('平成元', $SUT->provide(new \DateTimeImmutable('1989-01-07')));
+        $this->assertEquals('平成2', $SUT->provide(new \DateTimeImmutable('1990-01-01')));
     }
 
     private function getSUT()

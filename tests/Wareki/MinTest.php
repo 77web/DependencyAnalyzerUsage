@@ -21,7 +21,7 @@ class MinTest extends TestCase
     {
         $SUT = new Min('dummy', 20190401);
 
-        $this->assertEquals('dummy元年4月1日', $SUT->provide(new \DateTimeImmutable('2019-04-01')));
-        $this->assertEquals('dummy2年4月1日', $SUT->provide(new \DateTimeImmutable('2020-04-01')));
+        $this->assertEquals('dummy元', $SUT->provide(new \DateTimeImmutable('2019-04-01')));
+        $this->assertEquals('dummy2', $SUT->provide(new \DateTimeImmutable('2020-04-01')));
     }
 }

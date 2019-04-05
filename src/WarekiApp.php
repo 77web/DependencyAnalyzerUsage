@@ -7,22 +7,22 @@ namespace Quartetcom\TryDependencyAnalyzer;
 class WarekiApp
 {
     /**
-     * @var WarekiProviderResolver
+     * @var WarekiYearProviderResolver
      */
-    private $warekiProviderResolver;
+    private $warekiYearProviderResolver;
 
     /**
-     * @param WarekiProviderResolver $warekiProviderResolver
+     * @param WarekiYearProviderResolver $warekiProviderResolver
      */
-    public function __construct(WarekiProviderResolver $warekiProviderResolver)
+    public function __construct(WarekiYearProviderResolver $warekiProviderResolver)
     {
-        $this->warekiProviderResolver = $warekiProviderResolver;
+        $this->warekiYearProviderResolver = $warekiProviderResolver;
     }
 
     public function run(string $date)
     {
         $targetDate = new \DateTimeImmutable($date);
 
-        return $this->warekiProviderResolver->resolve($targetDate)->provide($targetDate);
+        return sprintf('%s年%s', $this->warekiYearProviderResolver->resolve($targetDate)->provide($targetDate), $targetDate->format('n月j日'));
     }
 }

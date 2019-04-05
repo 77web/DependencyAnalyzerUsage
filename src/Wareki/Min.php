@@ -4,10 +4,9 @@
 namespace Quartetcom\TryDependencyAnalyzer\Wareki;
 
 
-class Min implements WarekiProviderInterface
+class Min implements WarekiYearProviderInterface
 {
     use WarekiYearTrait;
-    use FormatDateTrait;
 
     /**
      * @var string
@@ -38,6 +37,6 @@ class Min implements WarekiProviderInterface
 
     public function provide(\DateTimeInterface $date): string
     {
-        return $this->formatDate($this->getWarekiYear($date), $date);
+        return sprintf('%s%s', $this->name, $this->getWarekiYear($date));
     }
 }

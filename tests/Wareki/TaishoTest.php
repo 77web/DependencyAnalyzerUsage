@@ -22,8 +22,8 @@ class TaishoTest extends TestCase
     {
         $SUT = $this->getSUT();
 
-        $this->assertEquals('大正元年7月30日', $SUT->provide(new \DateTimeImmutable('1912-07-30')));
-        $this->assertEquals('大正2年1月1日', $SUT->provide(new \DateTimeImmutable('1913-01-01')));
+        $this->assertEquals('大正元', $SUT->provide(new \DateTimeImmutable('1912-07-30')));
+        $this->assertEquals('大正2', $SUT->provide(new \DateTimeImmutable('1913-01-01')));
     }
 
     private function getSUT()

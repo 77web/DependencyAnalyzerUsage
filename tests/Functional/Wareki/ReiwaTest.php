@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Quartetcom\TryDependencyAnalyzer\Wareki;
+namespace Quartetcom\TryDependencyAnalyzer\Functional\Wareki;
 
-
+use Quartetcom\TryDependencyAnalyzer\Wareki\Min;
 use PHPUnit\Framework\TestCase;
 
 class ReiwaTest extends TestCase

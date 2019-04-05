@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Quartetcom\TryDependencyAnalyzer\Wareki;
+namespace Quartetcom\TryDependencyAnalyzer\Functional\Wareki;
 
-
+use Quartetcom\TryDependencyAnalyzer\Wareki\MinMax;
 use PHPUnit\Framework\TestCase;
 
 class MeijiTest extends TestCase

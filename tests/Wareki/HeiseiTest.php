@@ -27,6 +27,6 @@ class HeiseiTest extends TestCase
 
     private function getSUT()
     {
-        return new Heisei();
+        return new MinMax('平成', 19890107, 20190501);
     }
 }

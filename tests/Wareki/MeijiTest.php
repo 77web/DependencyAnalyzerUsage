@@ -28,6 +28,6 @@ class MeijiTest extends TestCase
 
     private function getSUT()
     {
-        return new Meiji();
+        return new MinMax('明治', 18680125, 19120730);
     }
 }

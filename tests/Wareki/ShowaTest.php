@@ -28,6 +28,6 @@ class ShowaTest extends TestCase
 
     private function getSUT()
     {
-        return new Showa();
+        return new MinMax('昭和', 19261225, 19890107);
     }
 }

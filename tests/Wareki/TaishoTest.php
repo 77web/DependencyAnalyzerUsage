@@ -28,6 +28,6 @@ class TaishoTest extends TestCase
 
     private function getSUT()
     {
-        return new Taisho();
+        return new MinMax('大正', 19120730, 19261225);
     }
 }

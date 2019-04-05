@@ -25,6 +25,6 @@ class ReiwaTest extends TestCase
 
     private function getSUT()
     {
-        return new Reiwa();
+        return new Min('令和', 20190501);
     }
 }

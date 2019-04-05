@@ -1,9 +1,9 @@
 <?php
 
 
-namespace Quartetcom\TryDependencyAnalyzer\Wareki;
+namespace Quartetcom\TryDependencyAnalyzer\Functional\Wareki;
 
-
+use Quartetcom\TryDependencyAnalyzer\Wareki\MinMax;
 use PHPUnit\Framework\TestCase;
 
 class HeiseiTest extends TestCase
@@ -21,12 +21,12 @@ class HeiseiTest extends TestCase
     {
         $SUT = $this->getSUT();
 
-        $this->assertEquals('平成元年1月7日', $SUT->provide(new \DateTimeImmutable('1989-01-07')));
-        $this->assertEquals('平成2年1月1日', $SUT->provide(new \DateTimeImmutable('1990-01-01')));
+        $this->assertEquals('平成元', $SUT->provide(new \DateTimeImmutable('1989-01-07')));
+        $this->assertEquals('平成2', $SUT->provide(new \DateTimeImmutable('1990-01-01')));
     }
 
     private function getSUT()
     {
-        return new Heisei();
+        return new MinMax('平成', 19890107, 20190501);
     }
 }

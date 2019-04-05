@@ -9,11 +9,16 @@ trait WarekiYearTrait
     /**
      * @var int
      */
-    private $startYear;
+    private $minYmd;
 
     private function getWarekiYear(\DateTimeInterface $date): string
     {
-        $year = (int)$date->format('Y') - $this->startYear + 1;
+        $startYear = intval($this->minYmd / 10000);
+        if ($startYear === 0) {
+            var_dump($date->format('Y-m-d'));
+        }
+
+        $year = (int)$date->format('Y') - $startYear + 1;
         if ($year === 1) {
             return '元';
         }

@@ -35,6 +35,11 @@ class Min implements WarekiYearProviderInterface
         return $ymd >= $this->minYmd;
     }
 
+    /**
+     * @canOnlyUsedBy \Quartetcom\TryDependencyAnalyzer\WarekiApp
+     * @param \DateTimeInterface $date
+     * @return string
+     */
     public function provide(\DateTimeInterface $date): string
     {
         return sprintf('%s%s', $this->name, $this->getWarekiYear($date));

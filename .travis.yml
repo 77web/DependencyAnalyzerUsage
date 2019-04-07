@@ -29,5 +29,5 @@ jobs:
       name: Dependency analyzer
       php: 7.2
       script:
-        - ./vendor/bin/analyze-deps verify ./src --rule=./rule.php
+        - ./vendor/bin/analyze-deps verify ./src 
 

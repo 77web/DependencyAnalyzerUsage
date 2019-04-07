@@ -3,7 +3,11 @@
 
 namespace Quartetcom\TryDependencyAnalyzer\Wareki;
 
-
+/**
+ * Class Min
+ * @canOnlyUsedBy \Quartetcom\TryDependencyAnalyzer\WarekiApp
+ * @package Quartetcom\TryDependencyAnalyzer\Wareki
+ */
 class Min implements WarekiYearProviderInterface
 {
     use WarekiYearTrait;

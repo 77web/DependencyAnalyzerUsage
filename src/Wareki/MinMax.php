@@ -3,7 +3,11 @@
 
 namespace Quartetcom\TryDependencyAnalyzer\Wareki;
 
-
+/**
+ * Class MinMax
+ * @canOnlyUsedBy \Quartetcom\TryDependencyAnalyzer\WarekiApp
+ * @package Quartetcom\TryDependencyAnalyzer\Wareki
+ */
 class MinMax implements WarekiYearProviderInterface
 {
     use WarekiYearTrait;
@@ -43,7 +47,6 @@ class MinMax implements WarekiYearProviderInterface
     }
 
     /**
-     * @canOnlyUsedBy \Quartetcom\TryDependencyAnalyzer\WarekiApp
      * @param \DateTimeInterface $date
      * @return string
      */

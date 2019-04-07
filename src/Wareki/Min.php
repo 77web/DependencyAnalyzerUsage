@@ -3,7 +3,11 @@
 
 namespace Quartetcom\TryDependencyAnalyzer\Wareki;
 
-
+/**
+ * Class Min
+ * @canOnlyUsedBy \Quartetcom\TryDependencyAnalyzer\WarekiApp
+ * @package Quartetcom\TryDependencyAnalyzer\Wareki
+ */
 class Min implements WarekiYearProviderInterface
 {
     use WarekiYearTrait;
@@ -35,6 +39,11 @@ class Min implements WarekiYearProviderInterface
         return $ymd >= $this->minYmd;
     }
 
+    /**
+     * @canOnlyUsedBy \Quartetcom\TryDependencyAnalyzer\WarekiApp
+     * @param \DateTimeInterface $date
+     * @return string
+     */
     public function provide(\DateTimeInterface $date): string
     {
         return sprintf('%s%s', $this->name, $this->getWarekiYear($date));

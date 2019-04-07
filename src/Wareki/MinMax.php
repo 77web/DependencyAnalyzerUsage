@@ -3,7 +3,11 @@
 
 namespace Quartetcom\TryDependencyAnalyzer\Wareki;
 
-
+/**
+ * Class MinMax
+ * @canOnlyUsedBy \Quartetcom\TryDependencyAnalyzer\WarekiApp
+ * @package Quartetcom\TryDependencyAnalyzer\Wareki
+ */
 class MinMax implements WarekiYearProviderInterface
 {
     use WarekiYearTrait;
@@ -42,6 +46,10 @@ class MinMax implements WarekiYearProviderInterface
         return $ymd >= $this->minYmd && $ymd < $this->maxYmd;
     }
 
+    /**
+     * @param \DateTimeInterface $date
+     * @return string
+     */
     public function provide(\DateTimeInterface $date): string
     {
         return sprintf('%s%s', $this->name, $this->getWarekiYear($date));

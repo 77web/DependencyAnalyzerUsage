@@ -8,6 +8,7 @@ use PHPUnit\Framework\TestCase;
 use Quartetcom\TryDependencyAnalyzer\Wareki\Min;
 use Quartetcom\TryDependencyAnalyzer\Wareki\MinMax;
 use Quartetcom\TryDependencyAnalyzer\WarekiApp;
+use Quartetcom\TryDependencyAnalyzer\WarekiYearProvider;
 use Quartetcom\TryDependencyAnalyzer\WarekiYearProviderResolver;
 
 class WarekiAppTest extends TestCase
@@ -23,7 +24,7 @@ class WarekiAppTest extends TestCase
             ->addWarekiYearProvider(new Min('令和', 20190501))
         ;
 
-        $SUT = new WarekiApp($yearResolver);
+        $SUT = new WarekiApp(new WarekiYearProvider($yearResolver));
         $this->assertEquals('平成31年4月1日', $SUT->run('2019-04-01'));
         $this->assertEquals('令和元年5月1日', $SUT->run('2019-05-01'));
     }

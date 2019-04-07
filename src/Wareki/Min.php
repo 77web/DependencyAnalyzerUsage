@@ -5,7 +5,7 @@ namespace Quartetcom\TryDependencyAnalyzer\Wareki;
 
 /**
  * Class Min
- * @canOnlyUsedBy \Quartetcom\TryDependencyAnalyzer\WarekiApp
+ * @canOnlyUsedBy \Quartetcom\TryDependencyAnalyzer\WarekiYearProvider
  * @package Quartetcom\TryDependencyAnalyzer\Wareki
  */
 class Min implements WarekiYearProviderInterface
